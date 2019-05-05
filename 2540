@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int i, n, v;
+		double imp;
+
+		while(sc.hasNext())
+		{		
+		
+			imp = 0;
+			n=sc.nextInt();
+			for(i=0;i<n;i++)
+			{
+				v=sc.nextInt();
+				if(v==1)
+				{
+					imp++;
+				}				
+			}
+			
+			if (imp>=(0.66666666666666666667*n))
+			{
+				System.out.println("impeachment");
+			}
+			if (imp<(0.66666666666666666667*n))
+			{
+				System.out.println("acusacao arquivada");
+			}
+		}
+		sc.close();
+	}
+}
