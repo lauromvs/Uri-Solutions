@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int i, n, t;
+		
+		n=sc.nextInt();
+		
+		for(i=0;i<n;i++)
+		{
+			t=sc.nextInt();
+			t=2015-t;
+			if(t>0)
+			{
+				System.out.println(t+" D.C.");
+			}
+			else
+			{
+				t=Math.abs(t);
+				t++;
+				System.out.println(t+" A.C.");
+			}
+		}
+		 
+		sc.close();
+	}
+}
