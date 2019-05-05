@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("0.00");
+		int func;
+		int h;
+		float valorH;
+		float salario;
+		func = sc.nextInt();
+		h = sc.nextInt();
+		valorH = sc.nextFloat();
+		salario = valorH*h;
+		System.out.println("NUMBER = " + func);
+		System.out.println("SALARY = U$ " + df.format(salario));
+		
+	}
+}
