@@ -1,0 +1,45 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int i, i2, sI, n, x, y;
+		n=sc.nextInt();
+		
+		for(i=0; i<n; i++)
+		{
+			
+			x=sc.nextInt();
+			y=sc.nextInt();
+			
+			if (x>y) 
+			{
+				sI = 0;
+				for(i2=y+1; i2<x; i2++)
+				{
+					if(i2%2!=0)
+					{
+						sI += i2;
+					}
+				}
+				System.out.println(sI);
+			}
+			
+			else
+			{
+				sI = 0;
+				for(i2=x+1; i2<y; i2++)
+				{
+					if(i2%2!=0)
+					{
+						sI += i2;
+					}
+				}
+				System.out.println(sI);
+			}			
+		}		
+	}
+}
