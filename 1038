@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+	public static void main (String[] args) {
+		DecimalFormat df = new DecimalFormat ("0.00");
+		Scanner sc = new Scanner(System.in);
+		int cod;
+		int qtd;
+		double total;
+		cod = sc.nextInt();
+		qtd = sc.nextInt();
+		//better with switch
+		if (cod==1) {
+			total = qtd*4.00;
+			System.out.println("Total: R$ "+df.format(total));
+		}
+		
+		if (cod==2) {
+			total = qtd*4.50;
+			System.out.println("Total: R$ "+df.format(total));
+		}
+		
+		if (cod==3) {
+			total = qtd*5.00;
+			System.out.println("Total: R$ "+df.format(total));
+		}
+	
+		if (cod==4) {
+			total = qtd*2.00;
+			System.out.println("Total: R$ "+df.format(total));
+		}
+		
+		if (cod==5) {
+			total = qtd*1.50;
+			System.out.println("Total: R$ "+df.format(total));
+		}		
+	}	
+}
