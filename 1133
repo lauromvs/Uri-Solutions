@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DecimalFormat df = new DecimalFormat ("0.0");
+		Scanner sc = new Scanner(System.in);
+		int i, x, y, aux;
+		x = sc.nextInt();
+		y = sc.nextInt();
+		
+		if(x>y) 
+		{
+			aux=x;
+			x=y;
+			y=aux;
+		}
+		
+		for (i=x+1; i<y; i++)
+		{
+			
+			if(i%5==2 || i%5==3)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+}
