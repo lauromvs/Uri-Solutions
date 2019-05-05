@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		
+		int i, n, mat, insc;
+		double nota, maior;
+		maior = 0;
+		nota = 0;
+		insc = 0;		
+		n = sc.nextInt();
+		
+		for (i=0; i<n; i++)
+		{
+			mat = sc.nextInt();
+			nota = sc.nextDouble();
+			
+			if (maior<nota)
+			{
+				maior = nota;
+				insc = mat;
+			}
+			
+		}
+		if (maior<8.0)
+		{
+			System.out.println("Minimum note not reached");
+		}
+		else
+		{
+			System.out.println(insc);
+		}
+
+	}
+}
