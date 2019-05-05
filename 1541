@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int a, b, c, l;
+		double areaC, area;
+		
+		a=sc.nextInt();
+		while(a!=0)
+		{
+			b=sc.nextInt();
+			c=sc.nextInt();
+			area=a*b;
+			areaC=(area*100)/(double)c;
+			l=(int)Math.sqrt(areaC);
+			System.out.println(l);
+			a=sc.nextInt();
+		}
+		
+	}
+}
