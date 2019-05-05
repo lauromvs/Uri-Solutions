@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int i, n, soma, resto;
+		
+		soma=0;
+		for(i=0;i<9;i++)
+		{
+			n=sc.nextInt();
+			soma += n;
+		}
+		resto=soma%9;
+		
+		switch (resto)
+		{
+		case 1:
+			System.out.println("Dasher");
+			break;
+		case 2:
+			System.out.println("Dancer");
+			break;
+		case 3:
+			System.out.println("Prancer");
+			break;
+		case 4:
+			System.out.println("Vixen");
+			break;
+		case 5:
+			System.out.println("Comet");
+			break;
+		case 6:
+			System.out.println("Cupid");
+			break;
+		case 7:
+			System.out.println("Donner");
+			break;
+		case 8:
+			System.out.println("Blitzen");
+			break;
+		case 0:
+			System.out.println("Rudolph");
+			break;
+		}
+		 
+		sc.close();
+	}
+}
