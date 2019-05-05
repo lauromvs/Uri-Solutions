@@ -1,0 +1,17 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("0.000");
+		int d;
+		double c;
+		double media;
+		d = sc.nextInt();
+		c = sc.nextDouble();
+		media = d/c;
+		System.out.println(df.format(media) + " km/l");
+		
+	}	
+}
