@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int i, n, coord;
+		String volver, volChar;
+		
+		n=sc.nextInt();
+		while(n!=0)
+		{
+			coord=1;
+			volver=sc.next();
+			
+			for(i=0;i<n;i++)
+			{
+				volChar=volver.substring(i,i+1);
+				if(volChar.equals("D"))
+				{
+					coord++;
+				}
+				else
+				{
+					coord=coord-1;
+				}
+				if(coord>4)
+				{
+					coord=1;
+				}
+				else
+				{
+					if(coord<1)
+					{
+						coord=4;
+					}
+				}
+			}
+			if(coord==1)
+			{
+				System.out.println("N");
+			}
+			else
+			{
+				if(coord==2)
+				{
+					System.out.println("L");
+				}
+				else
+				{
+					if(coord==3)
+					{
+						System.out.println("S");
+					}
+					else
+					{
+						if(coord==4)
+						{
+							System.out.println("O");
+						}
+					}
+				}
+			}
+			n=sc.nextInt();
+		}
+	}
+}
