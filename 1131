@@ -1,0 +1,56 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DecimalFormat df = new DecimalFormat ("0.00");
+		Scanner sc = new Scanner(System.in);
+		int j, gg, gi, vg, vi, e, ng;
+		ng = j = vg = vi = e = 0;
+				
+		while (ng!=2)
+		{
+			gi = sc.nextInt();
+			gg = sc.nextInt();
+			if (gg == gi)
+			{
+				e++;
+			}
+			else
+			{
+				if (gi>gg)
+				{
+					vi++;
+				}
+				else
+				{
+					vg++;
+				}
+			}
+			j++;
+			System.out.println("Novo grenal (1-sim 2-nao)");
+			ng = sc.nextInt();
+		}
+		System.out.println(j+" grenais");
+		System.out.println("Inter:"+vi);
+		System.out.println("Gremio:"+vg);
+		System.out.println("Empates:"+e);
+		if (vi==vg)
+		{
+			System.out.println("Nao houve vencedor");
+		}
+		else
+		{
+			if (vi>vg)
+			{
+				System.out.println("Inter venceu mais");
+			}
+			else
+			{
+				System.out.println("Gremio venceu mais");
+			}
+		}
+	}
+}
