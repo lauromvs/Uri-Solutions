@@ -1,0 +1,20 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("0.000");
+		double t;
+		double vel;
+		double dist;
+		double combus;
+		t = sc.nextDouble();
+		vel = sc.nextDouble();
+		dist = vel * t;
+		combus = dist/12;
+		System.out.println(df.format(combus));
+
+	}
+}
