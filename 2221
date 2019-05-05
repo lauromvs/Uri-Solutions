@@ -1,0 +1,51 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DecimalFormat df = new DecimalFormat ("0.00");
+		Scanner sc = new Scanner(System.in);
+		int i , t, b, a1, d1, l1, a2, d2, l2;
+		double vg1, vg2;
+		t=sc.nextInt();
+		
+		for(i=0;i<t;i++)
+		{
+			b=sc.nextInt();
+			a1=sc.nextInt();
+			d1=sc.nextInt();
+			l1=sc.nextInt();
+			vg1 = (a1+d1)/2;
+			if(l1%2==0)
+			{
+				vg1 += b;
+			}
+			a2=sc.nextInt();
+			d2=sc.nextInt();
+			l2=sc.nextInt();
+			vg2 = (a2+d2)/2;
+			if(l2%2==0)
+			{
+				vg2 += b;
+			}
+			if (vg1==vg2)
+			{
+				System.out.println("Empate");
+			}
+			else
+			{
+				if(vg1>vg2)
+				{
+					System.out.println("Dabriel");
+				}
+				else
+				{
+					System.out.println("Guarte");
+				}
+			}
+			
+		}
+	}
+}
