@@ -1,0 +1,23 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+   
+   public static void main(String [] args){
+	   DecimalFormat df = new DecimalFormat("0.0");
+	   Scanner sc = new Scanner(System.in);
+	   double a, b, c, per, area;
+	   a = sc.nextDouble();
+	   b = sc.nextDouble();
+	   c = sc.nextDouble();
+
+	   if (b+c>a && a+c>b && a+b>c) {
+		   per = a+b+c;
+		   System.out.println("Perimetro = " + df.format(per));
+	   }
+	   else {
+		   area=((a+b)*c)/2;
+		   System.out.println("Area = " + df.format(area));
+	   }
+   }
+}
