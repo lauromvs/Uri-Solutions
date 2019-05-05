@@ -1,0 +1,53 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DecimalFormat df = new DecimalFormat ("0");
+		Scanner sc = new Scanner(System.in);
+		int c, n, i, tam;
+		String aString, aChar;
+		long f, a1, a2, a3;
+		
+		while (sc.hasNext())
+		{
+			f=0;
+			a1=a3=1;
+			c=0;
+			a2=0;
+			n=sc.nextInt();
+			
+			while(c<n)
+			{
+				if (a1%3==0)
+				{
+					f=a1;
+					c++;
+				}
+				else
+				{
+					aString=String.valueOf(a1);
+					tam=aString.length();
+					for(i=0;i<tam;i++)
+					{
+						aChar=aString.substring(i,i+1);
+						if(aChar.equals("3"))
+						{
+							f=a1;
+							c++;
+							break;
+						}
+						
+					}
+				}
+				a3=a2;
+				a2=a1;
+				a1=a2+a3;
+			}
+			System.out.println(df.format(f));		
+		}
+		sc.close();
+	}
+}
