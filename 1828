@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		
+		int i, n;
+		String raj, shel;
+		
+		n = sc.nextInt();
+		
+		for(i=1; i<=n; i++)
+		{
+			shel = sc.next();
+			raj = sc.next();
+			
+			if (shel.equals(raj))
+			{
+				System.out.println("Caso #"+i+ ": De novo!");
+			}
+			else
+			{
+				if (shel.equals("tesoura") && (raj.equals("papel") || raj.equals("lagarto")))
+				{
+					System.out.println("Caso #"+i+ ": Bazinga!");
+				}
+				else
+				{
+					if (shel.equals("papel") && (raj.equals("pedra") || raj.equals("Spock")))
+					{
+						System.out.println("Caso #"+i+ ": Bazinga!");
+					}
+					else
+					{
+						if (shel.equals("pedra") && (raj.equals("lagarto") || raj.equals("tesoura")))
+						{
+							System.out.println("Caso #"+i+ ": Bazinga!");
+						}
+						else
+						{
+							if(shel.equals("lagarto") && (raj.equals("Spock") || raj.equals("papel")))
+							{
+								System.out.println("Caso #"+i+ ": Bazinga!");
+							}
+							else
+							{
+								if (shel.equals("Spock") && (raj.equals("tesoura") || raj.equals("pedra")))
+								{
+									System.out.println("Caso #"+i+ ": Bazinga!");
+								}
+								else
+								{
+									System.out.println("Caso #"+i+ ": Raj trapaceou!");
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
