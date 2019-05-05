@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+   
+   public static void main(String [] args){
+	   Scanner sc = new Scanner(System.in);
+	   int s, t, f, tempo, hora;
+	   s = sc.nextInt();
+	   t = sc.nextInt();
+	   f = sc.nextInt();
+	   tempo = s+t+f;
+	   
+	   if (tempo<0 || tempo >=24)
+	   {// t não está entre 0 e 23		   
+		   if (tempo<0)
+		   {
+			   tempo = tempo+24;
+		   }
+		   else
+		   {
+			   tempo = tempo%24;  
+		   }
+	   }
+	   
+	   System.out.println(tempo);		   
+   }   
+}
