@@ -1,0 +1,51 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+   
+   public static void main(String [] args){
+	   Scanner sc = new Scanner(System.in);
+	   DecimalFormat df = new DecimalFormat ("0.00");
+	   double sal, newSal, reajuste;
+	   sal = sc.nextDouble();
+	   
+	   if (sal>=0 && sal<=400) {
+		   newSal = sal*1.15;
+		   reajuste = newSal-sal;
+		   System.out.println("Novo salario: " + df.format(newSal));
+		   System.out.println("Reajuste ganho: " + df.format(reajuste));
+		   System.out.println("Em percentual: 15 %");
+	   }
+		   
+		   else if (sal>400 && sal<=800) {
+			   newSal = sal*1.12;
+			   reajuste = newSal-sal;
+			   System.out.println("Novo salario: " + df.format(newSal));
+			   System.out.println("Reajuste ganho: " + df.format(reajuste));
+			   System.out.println("Em percentual: 12 %");
+		   }
+	   		
+		   else if (sal>800 && sal<=1200) {
+			   newSal = sal*1.1;
+			   reajuste = newSal-sal;
+			   System.out.println("Novo salario: " + df.format(newSal));
+			   System.out.println("Reajuste ganho: " + df.format(reajuste));
+			   System.out.println("Em percentual: 10 %");
+		   }
+		   
+		   else if (sal>1200 && sal<=2000) {
+			   newSal = sal*1.07;
+			   reajuste = newSal-sal;
+			   System.out.println("Novo salario: " + df.format(newSal));
+			   System.out.println("Reajuste ganho: " + df.format(reajuste));
+			   System.out.println("Em percentual: 7 %");
+		   }
+		   else {
+			   newSal = sal*1.04;
+			   reajuste = newSal-sal;
+			   System.out.println("Novo salario: " + df.format(newSal));
+			   System.out.println("Reajuste ganho: " + df.format(reajuste));
+			   System.out.println("Em percentual: 4 %");
+		   }
+	   }
+   }
