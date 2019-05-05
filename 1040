@@ -1,0 +1,47 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+	public static void main (String[] args) {
+		DecimalFormat df = new DecimalFormat ("0.0");
+		Scanner sc = new Scanner(System.in);
+		double n1, n2, n3, n4, media, exam;
+		n1 = sc.nextDouble();
+		n2 = sc.nextDouble();
+		n3 = sc.nextDouble();
+		n4 = sc.nextDouble();
+		media = (n1*2 + n2*3 + n3*4 + n4*1)/10;
+		System.out.println("Media: " + df.format(media));
+		
+		if (media >= 7) 
+		{// Aluno aprovado
+			System.out.println("Aluno aprovado.");
+		}
+		else
+		{// Não aprovou
+						
+			if (media < 5) 
+			{// Aluno reprovou
+				System.out.println("Aluno reprovado.");				
+			}
+			else
+			{// Aluno de exame
+				System.out.println("Aluno em exame.");
+				exam = sc.nextDouble();
+				System.out.println("Nota do exame: " + df.format(exam));
+				media = (media+exam)/2;
+				
+				if (media >= 5) 
+				{// Aprovou
+					System.out.println("Aluno aprovado.");
+				}
+				else 
+				{// Reprovou
+					System.out.println("Aluno reprovado.");
+				}
+				
+				System.out.println("Media final: " + df.format(media));								
+			}
+		}		
+	}	
+}
