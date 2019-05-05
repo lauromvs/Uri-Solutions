@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int i, p, n, h, h2, d;
+		String sapo;
+		sapo="x";
+		p=sc.nextInt();
+		n=sc.nextInt();
+		h=sc.nextInt();
+		for(i=0;i<n-1;i++)
+		{
+			h2=sc.nextInt();
+			d = Math.abs(h-h2);
+			h=h2;
+			if(d>p)
+			{
+				sapo="GAME OVER"; 
+			}
+		}
+		if(sapo.equals("x"))
+		{
+			sapo="YOU WIN";
+		}
+		System.out.println(sapo);
+	}
+}
