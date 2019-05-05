@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double velX = 1;
+		double velY = 1.5;
+		double desloc = sc.nextDouble();
+		double t;
+		t = desloc/(velY - velX); 
+		System.out.println((int)t + " minutos");
+		
+	}
+}
