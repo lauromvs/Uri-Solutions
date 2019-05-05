@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Main {
+   
+   public static void main(String [] args){
+	   Scanner sc = new Scanner(System.in);
+	   int hi, hf, mi, mf, h, m;
+	   hi = sc.nextInt();
+	   mi = sc.nextInt();
+	   hf = sc.nextInt();
+	   mf = sc.nextInt();	   
+	   
+	   if (hf>hi && mf>mi) {
+		   h = hf-hi;
+		   m = mf-mi;
+		   System.out.println("O JOGO DUROU " + h + " HORA(S) E " + m + " MINUTO(S)");
+	   }
+	   else if (hf>hi && mf<mi) {
+		   h = (hf-hi)-1;
+		   m = (60-mi)+mf;
+		   System.out.println("O JOGO DUROU " + h + " HORA(S) E " + m + " MINUTO(S)");
+	   }
+	   else if (hf>hi && mf==mi) {
+		   h = hf-hi;
+		   m = mi-mf;
+		   System.out.println("O JOGO DUROU " + h + " HORA(S) E " + m + " MINUTO(S)");
+	   }
+	   else if (hf<hi && mf>mi) {
+		   h = (24-hi)+hf;
+		   m = mf-mi;
+		   System.out.println("O JOGO DUROU " + h + " HORA(S) E " + m + " MINUTO(S)");
+	   }
+	   else if (hf<hi && mf<mi) {
+		   h = ((24-hi)+hf)-1;
+		   m = (60-mi)+mf;
+		   System.out.println("O JOGO DUROU " + h + " HORA(S) E " + m + " MINUTO(S)");
+	   }
+	   else if (hf<hi && mf==mi) {
+		   h = (24-hi)+hf;
+		   m = mi-mf;
+		   System.out.println("O JOGO DUROU " + h + " HORA(S) E " + m + " MINUTO(S)");
+	   }
+	   else if (hf==hi && mf<mi) {
+		   h = ((24-hi)+hf)-1;
+		   m = (60-mi)+mf;
+		   System.out.println("O JOGO DUROU " + h + " HORA(S) E " + m + " MINUTO(S)");
+	   }
+	   else if (hf==hi && mf>mi) {
+		   h = hi-hf;
+		   m = mf-mi;
+		   System.out.println("O JOGO DUROU " + h + " HORA(S) E " + m + " MINUTO(S)");
+	   }
+	   else if (hf==hi && mf==mi) {
+		   h = (hi-hf)+24;
+		   m = mi-mf;
+		   System.out.println("O JOGO DUROU " + h + " HORA(S) E " + m + " MINUTO(S)");
+	   }
+   }
+}
