@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+   
+   public static void main(String [] args){
+	   
+	   Scanner sc = new Scanner(System.in);
+	   int a1, b1, c1, a, b, c, x;
+	   a1 = sc.nextInt();
+	   b1 = sc.nextInt();
+	   c1 = sc.nextInt();
+	   a = a1;
+	   b = b1;
+	   c = c1;
+	   
+	   if (b>a) {
+		   x = a;
+		   a = b;
+		   b = x;		   
+	   }
+	   if (c>a) {
+		   x = a;
+		   a = c;
+		   c = x;
+	   }
+	   if (c>b) {
+		   x = b;
+		   b = c;
+		   c = x;
+	   }
+	   System.out.println(c);
+	   System.out.println(b);
+	   System.out.println(a);
+	   System.out.println();
+	   System.out.println(a1);
+	   System.out.println(b1);
+	   System.out.println(c1);
+   }
+}
