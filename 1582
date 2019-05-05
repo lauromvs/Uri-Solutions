@@ -1,0 +1,70 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		DecimalFormat df = new DecimalFormat ("0.00");
+		Scanner sc = new Scanner(System.in);
+		int x, y, z, aux, resto, mdc;
+		String res;
+		while(sc.hasNext())
+		{
+			resto=1;
+			x=sc.nextInt();
+			y=sc.nextInt();
+			z=sc.nextInt();
+			
+			if(x<y)
+			{
+				aux=x;
+				x=y;
+				y=aux;
+			}
+			//x é maior q y
+			if(x<z)
+			{
+				aux=x;
+				x=z;
+				z=aux;
+			}
+			//x>y && x>z
+			if(y<z)
+			{
+				aux=y;
+				y=z;
+				z=aux;
+			}
+			//x>y>z
+			
+			if(x*x==y*y+z*z)
+			{
+				res="tripla pitagorica";
+				while(resto!=0)
+				{
+					resto=x%y;
+					x=y;
+					y=resto;
+				}
+				resto=1;
+				while(resto!=0)
+				{
+					resto=x%z;
+					x=z;
+					z=resto;
+				}
+				if(x==1)
+				{
+					res="tripla pitagorica primitiva";
+				}
+			}
+			else
+			{
+				res="tripla";
+			}
+			System.out.println(res);
+		}
+		sc.close();
+	}
+}
