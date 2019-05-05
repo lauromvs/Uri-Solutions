@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+   
+   public static void main(String [] args){
+	   Scanner sc = new Scanner(System.in);
+	   int hi, hf, tempo;
+	   hi = sc.nextInt();
+	   hf = sc.nextInt();
+	   
+	   if (hf>hi) {
+		   tempo = hf - hi;
+		   System.out.println("O JOGO DUROU " + tempo + " HORA(S)");
+	   }
+	   else if (hi>=hf) {
+		   tempo = (24-hi) + hf;
+		   System.out.println("O JOGO DUROU " + tempo + " HORA(S)");
+	   }
+   }
+}
