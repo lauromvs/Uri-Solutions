@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double valor = sc.nextDouble();;
+		int valorInt;
+		int valor100;
+		int valor50;
+		int valor20;
+		int valor10;
+		int valor5;
+		int valor2;
+		int valor1;
+		double moedas = (valor%1)*100;
+		int moedasInt;
+		int moedas50;
+		int moedas25;
+		int moedas10;
+		int moedas05;
+		int moedas01;
+		valorInt = (int)valor;
+		valor100 = valorInt/100;
+		valor50 = (valorInt%100)/50;
+		valor20 = ((valorInt%100)%50)/20;
+		valor10 = (((valorInt%100)%50)%20)/10;
+		valor5 = ((((valorInt%100)%50)%20)%10)/5;
+		valor2 = (((((valorInt%100)%50)%20)%10)%5)/2;
+		valor1 = ((((((valorInt%100)%50)%20)%10)%5)%2)/1;
+		
+		moedasInt = (int)moedas;
+		moedas50 = moedasInt/50;
+		moedas25 = (moedasInt%50)/25;
+		moedas10 = ((moedasInt%50)%25)/10;
+		moedas05 = (((moedasInt%50)%25)%10)/05;
+		moedas01 = ((((moedasInt%50)%25)%10)%05)/01;
+		
+		
+		
+		System.out.println("NOTAS:");
+		System.out.println(valor100 + " nota(s) de R$ 100.00");
+		System.out.println(valor50 + " nota(s) de R$ 50.00");
+		System.out.println(valor20 + " nota(s) de R$ 20.00");
+		System.out.println(valor10 + " nota(s) de R$ 10.00");
+		System.out.println(valor5 + " nota(s) de R$ 5.00");
+		System.out.println(valor2 + " nota(s) de R$ 2.00");
+		System.out.println("MOEDAS:");
+		System.out.println(valor1 + " moeda(s) de R$ 1.00");
+		System.out.println(moedas50 + " moeda(s) de R$ 0.50");
+		System.out.println(moedas25 + " moeda(s) de R$ 0.25");
+		System.out.println(moedas10 + " moeda(s) de R$ 0.10");
+		System.out.println(moedas05 + " moeda(s) de R$ 0.05");
+		System.out.println(moedas01 + " moeda(s) de R$ 0.01");
+
+	}
+}
