@@ -1,0 +1,33 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DecimalFormat df = new DecimalFormat("0.000");
+		Scanner sc = new Scanner(System.in);
+		double a;
+		double b;
+		double c;
+		double tri;
+		double circ;
+		double trap;
+		double quad;
+		double ret;
+		a = sc.nextDouble();
+		b = sc.nextDouble();
+		c = sc.nextDouble();
+		tri = (a*c)/2;
+		circ = 3.14159*c*c;
+		trap = ((a+b)*c)/2;
+		quad = b*b;
+		ret = a*b;
+		System.out.println("TRIANGULO: " + df.format(tri));
+		System.out.println("CIRCULO: " + df.format(circ));
+		System.out.println("TRAPEZIO: " + df.format(trap));
+		System.out.println("QUADRADO: " + df.format(quad));
+		System.out.println("RETANGULO: " + df.format(ret));		
+
+	}
+}
