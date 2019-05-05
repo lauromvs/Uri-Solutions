@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DecimalFormat df = new DecimalFormat ("0.00");
+		Scanner sc = new Scanner(System.in);
+		double nota, nv, media;
+		nv=0;
+		media=0;
+		while (nv<2)
+		{
+			nota=sc.nextDouble();
+			if (nota<0 || nota>10)
+			{
+				System.out.println("nota invalida");
+			}
+			else
+			{
+				media += nota;
+				nv++;
+			}
+		}
+		media /= nv;
+		System.out.println("media = " + df.format(media));
+		
+	}
+}
