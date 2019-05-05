@@ -1,0 +1,31 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		DecimalFormat df = new DecimalFormat ("0.00");
+		Scanner sc = new Scanner(System.in);
+		int n, x1, x2, erro;
+		erro=0;
+		x1=0;
+		while(sc.hasNext())
+		{
+			x2=sc.nextInt();
+			if(x2<=x1 && erro==0)
+			{
+				erro=x1;
+				erro++;
+			}
+			x1=x2;
+		}
+		if(erro==0)
+		{
+			erro=x1;
+			erro++;
+		}
+		System.out.println(erro);
+		sc.close();
+	}
+}
