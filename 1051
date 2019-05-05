@@ -1,0 +1,36 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+
+public class Main {
+	public static void main (String[] args) {
+		double s, imp;
+		Scanner sc = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("0.00");
+		s = sc.nextDouble();
+		
+		if (s <= 2000)
+		{
+			System.out.println("Isento");
+		}
+		else
+		{// salario maior que 2000
+			if (s <= 3000)
+			{
+				imp = (s-2000)*0.08;
+			}
+			else
+			{// salario maior que 3000
+				if (s <= 4500)
+				{
+					imp = (s-3000)*0.18 + 999.99*0.08;
+				}
+				else
+				{// salario maior que 4500
+					imp = (s-4500)*0.28 + 1499.99*0.18 + 999.99*0.08;
+				}
+			}
+			System.out.println("R$ " + df.format(imp));
+		}
+	}
+}
