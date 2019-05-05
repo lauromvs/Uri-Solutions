@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int i, i2, d, n, voto, count;
+		String data, res;
+		
+		while(sc.hasNext())
+		{
+			res="x";
+			n=sc.nextInt();
+			d=sc.nextInt();
+			
+			for(i=0;i<d;i++)
+			{
+				data=sc.next();
+				count=0;
+				for (i2=0;i2<n;i2++)
+				{
+
+					voto=sc.nextInt();
+					if(voto==1)
+					{
+						count++;
+					}
+				}
+
+				if(count==n && res=="x")
+				{
+					res=data;
+				}
+			}
+			if(res=="x")
+			{
+				res="Pizza antes de FdI";
+			}
+			System.out.println(res);
+		}
+		sc.close();
+	}
+}
