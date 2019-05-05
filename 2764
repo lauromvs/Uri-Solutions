@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		String data, saida1, saida2, saida3, dd, mm, aa;
+		
+		while(sc.hasNext())
+		{
+			data=sc.next();
+			dd=data.substring(0, 2);
+			mm=data.substring(3, 5);
+			aa=data.substring(6, 8);
+			System.out.println(mm+"/"+dd+"/"+aa);
+			System.out.println(aa+"/"+mm+"/"+dd);
+			System.out.println(data.replace("/", "-"));
+			
+			
+		}
+		 
+		sc.close();
+	}
+}
