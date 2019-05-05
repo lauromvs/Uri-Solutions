@@ -1,0 +1,116 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		DecimalFormat df = new DecimalFormat ("0.00");
+		Scanner sc = new Scanner(System.in);
+		String placar;
+		int p1, p2, n, i, saldo1, saldo2, ponto1, ponto2, golfora2, golfora1;
+		
+		n=Integer.parseInt(sc.nextLine());
+		
+		for(i=0;i<n;i++)
+		{
+			ponto1=ponto2=saldo1=saldo2=p1=p2=golfora1=golfora2=0; //zerar os contadores
+			
+			placar=sc.nextLine();
+			placar = placar.replaceAll("\\D+","");
+			p1=Integer.parseInt(placar.substring(0, 1));
+			p2=Integer.parseInt(placar.substring(1, 2));
+			saldo1+=p1;
+			saldo2+=p2;
+			golfora2 += p2;
+			if(p1==p2)
+			{
+				ponto1++;
+				ponto2++;
+			}
+			else
+			{
+				if(p1>p2)
+				{
+					ponto1 += 3;
+				}
+				else
+				{
+					
+					ponto2 += 3;
+				}
+			}
+			//partida de volta
+			placar=sc.nextLine();
+			placar = placar.replaceAll("\\D+","");
+			p2=Integer.parseInt(placar.substring(0, 1));
+			p1=Integer.parseInt(placar.substring(1, 2));
+			saldo1+=p1;
+			saldo2+=p2;
+			golfora1 += p1;
+			if(p1==p2)
+			{
+				ponto1++;
+				ponto2++;
+			}
+			else
+			{
+				if(p1>p2)
+				{
+					
+					ponto1 += 3;
+				}
+				else
+				{
+					ponto2 += 3;
+				}
+			}
+			
+			//condição de vitória
+			if(ponto1>ponto2)
+			{
+				System.out.println("Time 1");
+			}
+			else
+			{
+				if(ponto2>ponto1)
+				{
+					System.out.println("Time 2");
+				}
+				else
+				{//empate de ponto
+					if(saldo1>saldo2)
+					{
+						System.out.println("Time 1");
+					}
+					else
+					{
+						if (saldo2>saldo1)
+						{
+							System.out.println("Time 2");
+						}
+						else
+						{//empate de saldo
+							if(golfora1>golfora2)
+							{
+								System.out.println("Time 1");
+							}
+							else
+							{
+								if(golfora2>golfora1)
+								{
+									System.out.println("Time 2");
+								}
+								else
+								{//empate de gol fora de casa
+									System.out.println("Penaltis");
+								}
+							}
+						}
+					}
+				}
+			}
+		}		
+		sc.close();
+	}
+}
