@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		DecimalFormat df = new DecimalFormat ("0.00");
+		Scanner sc = new Scanner(System.in);
+		int s;
+		
+		s=sc.nextInt();
+		while(s!=2002)
+		{
+			System.out.println("Senha Invalida");
+			s=sc.nextInt();
+		}
+		System.out.println("Acesso Permitido");
+
+	}
+}
